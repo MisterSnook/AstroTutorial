@@ -1,34 +1,84 @@
-
+:root {
+  --Side-Bar-Width: 300px;
+  --Standard-Text-Color: #e8f0fc;
+  --Font: sans-serif;
+}
 html {
-    background-color: #b6d4f1;
-    font-family: sans-serif;
-  }
-  
-  body {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 80ch;
-    padding: 1rem;
-    line-height: 1.5;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-    color: purple;
-  }
-  /* nav styles */
+  background-color: rgb(74, 72, 72);
+  font-family: sans-serif;
+}
 
+
+body {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  margin-left: -var(--Side-Bar-Width);
+  font-size: 2.5rem;
+  color: var(--Standard-Text-Color);
+  font-family:var(--Font);
+  font-weight: lighter;
+  font-weight: bold;
+}
+
+.main{
+  margin-left: var(--Side-Bar-Width);
+  padding: 10px;
+}
+
+/* Side-Bar */
+.nav-links {
+  margin: 0;
+  padding: 0;
+  width: var(--Side-Bar-Width);
+  background-color: #000000;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.nav-links a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: var(--Font);
+  color: var(--Standard-Text-Color);
+  display: block;
+  text-align: center;
+}
+
+.nav-links a:visited {
+  color: var(--Standard-Text-Color);
+}
+
+.nav-links a:hover {
+  color: grey;
+}
+
+.ImageDeltaM{
+padding: 50px;
+filter:drop-shadow(3px 5px 2px rgb(256 256 256 / 0.4));
+}
+
+.hamburger {
+  display: none;
+}
+/* untill here */  
+
+@media screen and (max-width: 636px) {
   .hamburger {
     padding-right: 20px;
     /* padding-left: 200px; */
     cursor: pointer;
   }
-  
+
   .hamburger .line {
     display: block;
     width: 40px;
@@ -37,56 +87,38 @@ html {
     background-color: #1d0903;
   }
 
-.nav-links {
+  .nav-links {
     width: 100%;
     top: 5rem;
     left: 48px;
-    background-color: #8c351b;
+    background-color: #fdfdfd;
     display: none;
     margin: 0;
   }
-  
+
   .nav-links a {
     display: block;
     text-align: center;
-    padding: 10px ;
+    padding: 10px;
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
-  .nav-links a:hover, a:focus {
+
+  .nav-links a:hover,
+  a:focus {
     background-color: #454443;
   }
-  
+
   .expanded {
     display: unset;
   }
-  
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      margin-left: 5em;
-      display: block;
-      position: static;
-      width: auto;
-      background: none;
-    }
-  
-    .nav-links a {
-      display: inline-block;
-      padding: 15px 20px;
-    }
-
-  .hamburger {
-    display: none;
-  }
-
-  
-  }
-  .skill {
-    color: navy;
-    font-weight: bold;
-    text-transform: uppercase;
 }
-  
+
+.skill {
+  color: navy;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+

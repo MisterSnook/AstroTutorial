@@ -1,10 +1,66 @@
 ---
+import DeltaM from '../images/DeltaM.svg';
+import '../styles/global.css';
 ---
 
 <div class="nav-links">
+   <svg width=30%" height="30%" viewBox="-100 0 1800 1240">
+  <filter id='inset-shadow'>
+    <!-- Shadow offset -->
+    <feOffset
+            dx='0'
+            dy='0'
+          />
+    <!-- Shadow blur -->
+  <feGaussianBlur
+            stdDeviation='200'
+            result='offset-blur'
+          />
+    <!-- Invert drop shadow to make an inset shadow-->
+    <feComposite
+            operator='out'
+            in='SourceGraphic'
+            in2='offset-blur'
+            result='inverse'
+          />
+    <!-- Cut colour inside shadow -->
+    <feFlood
+            flood-color='black'
+            flood-opacity='0.98'
+            result='color'
+          />
+    <feComposite
+            operator='in'
+            in='color'
+            in2='inverse'
+            result='shadow'
+          />
+    <!-- Placing shadow over element -->
+    <feComposite
+            operator='over'
+            in='shadow'
+            in2='SourceGraphic'
+          /> 
+  </filter>
+  <g filter="url(#inset-shadow)">
+    <g transform="matrix(1,0,0,1,-384.021,-561.024)">
+        <g transform="matrix(1.43833,0,0,1.65533,-272.966,-239.381)">
+            <g transform="matrix(1,0,0,1,-37.6602,53.2122)">
+                <g transform="matrix(0.695249,0,0,0.604108,440.635,148.838)">
+                    
+                    <path fill="#dbdbdb" d="M962.875,775.984L1140.04,1086.02L1494.37,465.945L1671.54,775.394L1671.54,1706.1L1317.21,1706.1L1317.21,1396.06L1140.04,1706.06L785.935,1086.02L608.545,775.394L785.935,465.945L962.875,775.984Z"/>
+                </g>
+                <g transform="matrix(0.695249,0,0,0.604108,243.402,145.11)">
+                    <path fill="#dbdbdb"d="M1388.3,1711.9L361.062,1711.9L867.4,816.998L1388.3,1711.9Z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
 
     <a href="/">Home</a>
     <a href="/about/">About</a>
+    <a href="/blog/">Blog</a>
     <a href="/blog/">Blog</a>
 
 </div>
